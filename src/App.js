@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 
 import PasswordView from './views/password';
+import HomeViews from './views/home';
 
 import './App.css';
 
@@ -16,6 +17,9 @@ const App = () => {
     <>
         <Router>
           <Switch>
+            <Route path="/" exact={true}>
+              <HomeViews />
+            </Route>
             <Route path="/password-reset">
               <PasswordView />
             </Route>
