@@ -2,8 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 import PasswordView from './views/password';
@@ -20,8 +19,11 @@ const App = () => {
             <Route path="/" exact={true}>
               <HomeViews />
             </Route>
-            <Route path="/password-reset">
-              <PasswordView />
+
+            <Route 
+              path="/password-reset/:token"   
+              render={props => <PasswordView {...props} />}
+            >
             </Route>
           </Switch>
         </Router>
