@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 40px;
+  padding: 20px;
   font-family: Poppins, Rubik, sans-serif;
 }
 
@@ -79,4 +79,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  height: 100%;
+  width: 100%;
 }

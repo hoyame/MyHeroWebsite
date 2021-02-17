@@ -22,30 +22,18 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-        <div className="header">
-          <img className="logo" src="https://cdn.discordapp.com/attachments/650778484523794456/789992516505305098/Sans_titre_-_1.jpg"></img>
+      <Router>
+        <Switch>
+          <Route path="/" exact={true}>
+            <HomeViews />
+          </Route>
 
-          <div className="header-buttons">
-            <div className="header-button">C.G.U</div>
-            <div className="header-button">Telecharger</div>
-          </div>
-        </div>
-
-        <div className="content">        
-          <Router>
-            <Switch>
-              <Route path="/" exact={true}>
-                <HomeViews />
-              </Route>
-
-              <Route 
-                path="/password-reset/:token"   
-                render={props => <PasswordView {...props} />}
-                >
-              </Route>
-            </Switch>
-          </Router>
-        </div>
+          <Route 
+            path="/password-reset/:token"   
+            render={props => <PasswordView {...props} />}
+          />   
+        </Switch>
+      </Router>
     </div>
   );
 }

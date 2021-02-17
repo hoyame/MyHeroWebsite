@@ -1,4 +1,5 @@
 import React from 'react'
+import HeaderComponent from '../../components/Header/index'
 import './style.css'
 
 class PasswordView extends React.Component {
@@ -7,10 +8,13 @@ class PasswordView extends React.Component {
         console.log(token)
             
         return (
-            <>
+            <div className="App">
+
+                <HeaderComponent />
+
                 <div className="password-inputs">
-                    <p className="password-title">Log in</p>
-                    <p className="password-description">Veuillez inserer votre nouveau mdp.</p>
+                    <p className="password-title">Password Reset</p>
+                    <p className="password-description">Please insert your new password.</p>
 
                     <input placeholder="Password" className="input"></input>
                     <input placeholder="Password confirm" className="input"></input>
@@ -19,7 +23,7 @@ class PasswordView extends React.Component {
                         <p>Modifier</p>
                     </div>
                 </div>
-            </>
+            </div>
         );
     }
 }
