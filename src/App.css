@@ -12,3 +12,27 @@
   font-family: Poppins, Rubik, sans-serif;
 }
 
+.text-def {
+  opacity: 0.75;
+  color: #90959c;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.625;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 15px;
+  left: 25px;
+}
+
+.logo {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+
+  border-radius: 15px;
+  height: 90px;
+  width: 90px;
+}
