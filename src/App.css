@@ -8,8 +8,22 @@
 .App {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   padding: 40px;
   font-family: Poppins, Rubik, sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100px;
+  width: 100%;
+
+  border-radius: 20px;
+  background-color: #3d3b3c;
 }
 
 .text-def {
@@ -28,11 +42,41 @@
 }
 
 .logo {
-  position: absolute;
-  top: 25px;
-  left: 25px;
+  margin-left: 15px;
 
   border-radius: 15px;
-  height: 90px;
-  width: 90px;
+  height: 100px;
+  width: 100px;
+}
+
+.header-buttons {
+  display: flex;
+  flex-direction: row;
+  
+  margin-right: 20px;
+
+}
+
+.header-button {
+  margin-right: 5px;
+  font-size: 1.25rem;
+  text-decoration: none;
+  padding: .80rem;
+  margin: 0 .25rem;
+  color: rgb(114, 110, 110);
+  line-height: 1;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition-duration: 405ms;
+}
+
+.header-button:hover {
+  background-color: #ffffff;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
