@@ -32,7 +32,7 @@ class PasswordView extends React.Component {
             if (pass == passConfirm) {
                 setState({error: false})
 
-                fetch(`http://146.59.227.90:3333/user/reset_password`, {
+                fetch(`http://127.0.0.1:3333/user/reset_password`, {
                     method: 'POST',
                     headers: {
                       Accept: 'application/json',
@@ -59,7 +59,7 @@ class PasswordView extends React.Component {
                 email: mail,
             }
         
-            fetch(`http://146.59.227.90:3333/user/forgot_password`, {
+            fetch(`http://127.0.0.1:3333/user/forgot_password`, {
                 method: 'POST',
                 headers: {
                   Accept: 'application/json',
