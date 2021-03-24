@@ -5,21 +5,16 @@ import {
   Route
 } from "react-router-dom";
 import io from 'socket.io-client';
-
+import axios from 'axios';
 import PasswordView from './views/password';
 import HomeViews from './views/home';
 import AdminView from './views/admin';
 
-
 import './App.css';
 
 export let AlertList = [];
-{
-  /*
-        <img className="logo" src="https://cdn.discordapp.com/attachments/650778484523794456/789992516505305098/Sans_titre_-_1.jpg"></img>
-        <p className="text-def copyright">© 2020-2021 MyHeroes. Tous droits réservés. </p>
-  */
-}
+export let InformationsH24 = [];
+export let InformationsH24AV = [];
 
 const SOCKET_URL = 'http://146.59.227.90:3333';
 
@@ -29,6 +24,30 @@ export const socket = io.connect(SOCKET_URL, {
 });
 
 const App = () => {
+  axios.get(`${SOCKET_URL}/list/get`)
+    .then((response) => {
+        const data = response.data;
+        console.log("d", data)
+        InformationsH24 = data;
+    })
+
+    .catch((err) => {
+        console.log("err", err);
+    }
+  )
+
+  axios.get(`${SOCKET_URL}/list/get-verif`)
+    .then((response) => {
+        const data = response.data;
+        console.log("d", data)
+        InformationsH24AV = data;
+    })
+
+    .catch((err) => {
+        console.log("err", err);
+    }
+  )
+
   socket.on('connect', function(data) {
     socket.emit('join', 0);
   });

@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
     width: 100%;
 }
 
@@ -44,4 +45,15 @@
 .alert-icon:hover {
     cursor: pointer;
     color: #8d3021;
+}
+
+
+.alert-icon-t {
+    transition-duration: 200ms;
+    color: #2bb969;
+}
+
+.alert-icon-t:hover {
+    cursor: pointer;
+    color: #279e5a;
 }
